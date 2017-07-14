@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		vendor: 'materialize-loader!./scripts/materialize/materialize.config.js',
+		vendor: ['materialize-loader!./scripts/materialize/materialize.config.js', './node_modules/materialize-css/dist/js/materialize.min.js'],
 		main: './src/main.js'
 	},
 	output: {
