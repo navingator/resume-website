@@ -13,7 +13,10 @@
 			<nav class="nav-extended green">
 				<div class="nav-wrapper container">
 					<a href="/" class="brand-logo">Navin Pathak</a>
-					<ul class="right hide-on-med-and-down">
+
+					<!-- Desktop Nav -->
+					<a data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="desktop-nav right hide-on-med-and-down">
 						<li><a href="https://github.com/navingator" class="nav-icon"><img src="./assets/images/icons/GitHub-Mark-Light-64px.png" height="24" width="24"></a></li>
 						<li><a href="https://www.linkedin.com/in/navin-pathak/" class="nav-icon"><img src="./assets/images/icons/In-White-48px-R.png" height="24" width="29"></a></li>
 						<li><a class="dropdown-button" data-activates="contact-dropdown" data-beloworigin="true" data-constrainwidth="false" data-alignment="right">Contact Me<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -21,12 +24,16 @@
 
 					<!-- Dropdown for Contact Information-->
 					<ul id="contact-dropdown" class="dropdown-content">
-						<li>
-							<a href="mailto:navingator@gmail.com" target="_blank"><i class="material-icons">email</i> navingator@gmail.com</a>
-						</li>
-						<li>
-							<a href="tel:6085714012"><i class="material-icons">phone</i>(608) 571-4012</a>
-						</li>
+						<li><a href="mailto:navingator@gmail.com" target="_blank"><i class="material-icons">email</i> navingator@gmail.com</a></li>
+						<li><a href="tel:6085714012"><i class="material-icons">phone</i> (608) 571-4012</a></li>
+					</ul>
+
+					<!-- Mobile Nav -->
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="mailto:navingator@gmail.com" target="_blank"><i class="material-icons">email</i> navingator@gmail.com</a></li>
+						<li><a href="tel:6085714012"><i class="material-icons">phone</i> (608) 571-4012</a></li>
+						<li><a href="https://github.com/navingator"><img src="./assets/images/icons/GitHub-Mark-64px.png" height="24" width="24" class="nav-icon"> Github</a></li>
+						<li><a href="https://www.linkedin.com/in/navin-pathak/"><img src="./assets/images/icons/In-Black-48px-R.png" height="24" width="29" class="nav-icon"> Linkedin</a></li>
 					</ul>
 				</div> <!-- nav-wrapper -->
 
@@ -44,12 +51,16 @@
 			</nav>
 		</header>
 
-		<main id="home-content">
+		<main id="home-content" class="container">
 			<section id="resume">
-				<h2>Resumé</h2>
-				<div>
-					<button class="btn white"><a>PDF</a></button> <!-- TODO -->
-					<button class="btn white"><a>DOCX</a></button> <!-- TODO -->
+				<div class="row">
+					<div class="col s12 m5">
+						<h2 id="resume-title">Resumé</h2>
+					</div>
+					<div class="col s12 m7">
+						<button class="btn white"><a><i class="material-icons right">file_download</i> PDF</a></button> <!-- TODO -->
+						<button class="btn white"><a><i class="material-icons right">file_download</i> DOCX</a></button> <!-- TODO -->
+					</div>
 				</div>
 				<section id="education" class="resume-section">
 					<h3>Education</h3>

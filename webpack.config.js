@@ -7,9 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry: {
 		vendor: [
-			'materialize-loader!./scripts/materialize/materialize.config.js', 
-			'./node_modules/materialize-css/dist/js/materialize.min.js',
-			'./node_modules/jquery/dist/jquery.min.js'
+			'materialize-loader!./scripts/materialize/materialize.config', 
+			'./node_modules/materialize-css/dist/js/materialize.min',
+			'./node_modules/jquery/dist/jquery.min'
 		],
 		main: './src/main.js'
 	},
@@ -18,6 +18,14 @@ module.exports = {
 		filename: '[name].bundle.js'
 	},
 	plugins: [
+
+		// Provider for materialize-css javascript
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.$': 'jquery',
+			'window.jQuery': 'jquery'
+		}),
 		new CleanWebpackPlugin(['dist']),
 		new CopyWebpackPlugin([{ from: './src/assets', to: 'assets' }]),
 		new HtmlWebpackPlugin({
@@ -59,6 +67,12 @@ module.exports = {
 				use: [{ loader: "file-loader" }]
 			}
 		]
+	},
+
+	resolve: {
+		alias: {
+			'jquery': path.join( __dirname, 'node_modules/jquery/dist/jquery')
+		}
 	},
 
 	devServer: {
