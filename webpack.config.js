@@ -6,7 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		vendor: ['materialize-loader!./scripts/materialize/materialize.config.js', './node_modules/materialize-css/dist/js/materialize.min.js'],
+		vendor: [
+			'materialize-loader!./scripts/materialize/materialize.config.js', 
+			'./node_modules/materialize-css/dist/js/materialize.min.js',
+			'./node_modules/jquery/dist/jquery.min.js'
+		],
 		main: './src/main.js'
 	},
 	output: {
@@ -35,6 +39,10 @@ module.exports = {
 					loader: 'babel-loader',
 					options: { presets: ['es2015']}
 				}]
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader']
 			},
 			{
 				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

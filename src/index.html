@@ -10,11 +10,17 @@
 	</head>
 	<body>
 		<header>
-			<h1>Navin Pathak</h1>
-			<ul>
-				<li>Home</li>
-				<li>Contact Me
-					<ul>
+			<nav class="nav-extended green">
+				<div class="nav-wrapper container">
+					<a href="/" class="brand-logo">Navin Pathak</a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="https://github.com/navingator" class="nav-icon"><img src="./assets/images/icons/GitHub-Mark-Light-64px.png" height="24" width="24"></a></li>
+						<li><a href="https://www.linkedin.com/in/navin-pathak/" class="nav-icon"><img src="./assets/images/icons/In-White-48px-R.png" height="24" width="29"></a></li>
+						<li><a class="dropdown-button" data-activates="contact-dropdown" data-beloworigin="true" data-constrainwidth="false" data-alignment="right">Contact Me<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+
+					<!-- Dropdown for Contact Information-->
+					<ul id="contact-dropdown" class="dropdown-content">
 						<li>
 							<a href="mailto:navingator@gmail.com" target="_blank"><i class="material-icons">email</i> navingator@gmail.com</a>
 						</li>
@@ -22,21 +28,23 @@
 							<a href="tel:6085714012"><i class="material-icons">phone</i>(608) 571-4012</a>
 						</li>
 					</ul>
-				</li>
-				<li><a href="https://github.com/navingator">Github</a></li>
-				<li><a href="https://www.linkedin.com/in/navin-pathak/">Linkedin</a></li>
-			</ul>
+				</div> <!-- nav-wrapper -->
+
+				<div class="nav-content container">
+					<div class="row">
+						<div id="self-portrait" class="col s12 m5 ml4 l3 xl3 center-on-small-only">
+							<img class="circle" src="assets/images/professional.jpg" width="180" height="180" alt="Professional Photo">
+						</div>
+						<section id="about-me" class="col s12 m7 ml8 l9 xl9 center-on-small-only">
+							<h2>About Me</h2>
+							<div>I'm a medical student at Hofstra Northwell School of Medicine with a passion for patient care and medical technology. On the side, I enjoy programming to simplify my life and the lives of others around me. I love tackling difficult problems through teamwork, whether it's in the hospital with a patient, on the desk with my computer, or on the field with a frisbee.</div>
+						</section>
+					</div>
+				</div> <!-- nav-content -->
+			</nav>
 		</header>
 
 		<main id="home-content">
-			<div id="self-portrait">
-				<img src="assets/images/professional.jpg" width="175" height="240" alt="Professional Photo">
-			</div>
-			<section id="about-me">
-				<h2>About Me</h2>
-				<div>I'm a medical student at Hofstra Northwell School of Medicine with a passion for patient care and medical technology. On the side, I enjoy programming to simplify my life and the lives of others around me. I love tackling difficult problems through teamwork, whether it's in the hospital with a patient, on the desk with my computer, or on the field with a frisbee.</div>
-			</section>
-
 			<section id="resume">
 				<h2>Resumé</h2>
 				<div>

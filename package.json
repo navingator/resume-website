@@ -5,7 +5,7 @@
   "description": "Navin Pathak's resume site",
   "scripts": {
     "build": "webpack -p",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
