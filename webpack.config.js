@@ -6,8 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
+		materialize: 'materialize-loader!./scripts/materialize/materialize.config',
 		vendor: [
-			'materialize-loader!./scripts/materialize/materialize.config', 
 			'./node_modules/materialize-css/dist/js/materialize.min',
 			'./node_modules/jquery/dist/jquery.min'
 		],
@@ -53,7 +53,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				test: /\.woff(2)?$/,
 				use: [{
 					loader: 'url-loader',
 					options: {
@@ -63,9 +63,14 @@ module.exports = {
 				}]
 			},
 			{
-				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: [{ loader: "file-loader" }]
-			}
+				test: /\.ico$/,
+				use: [{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]'
+					}
+				}]
+			},
 		]
 	},
 

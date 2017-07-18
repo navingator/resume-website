@@ -3,18 +3,47 @@ a:hover {
   cursor: pointer;
 }
 
+nav {
+  position: relative;
+  z-index: 10;
+}
+
+nav .nav-background {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+nav .nav-background > .bg-image {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  position: absolute;
+  transition: opacity 0.7s;
+  transform: none;
+  background-repeat: repeat;
+}
+
 .desktop-nav .nav-icon {
 	padding: 5px 10px;
 	height: 64px;
 }
 
 nav li > a > .nav-icon {
-    float: left;
-    height: 48px;
-    padding: 12px 0;
-    margin: 0 32px 0 0;
-    width: 24px;
-    opacity: 0.6;
+  float: left;
+  height: 48px;
+  padding: 12px 0;
+  margin: 0 32px 0 0;
+  width: 24px;
+  opacity: 0.6;
 }
 
 .nav-content {
@@ -24,6 +53,29 @@ nav li > a > .nav-icon {
 .nav-content h2 {
 	font-size: 3rem;
 	margin: 1rem 0;
+}
+
+.resume-item > .card > .card-image {
+  flex: 0 0 180px;
+  padding-left: 24px;
+  margin: 24px 0;
+}
+.resume-item > .card > .resume-basic-info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.resume-item > .card > .resume-basic-info > .resume-date {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.resume-item > .card > .resume-basic-info > .resume-location {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.resume-item > .resume-main-content {
+  display: none;
 }
 
 
