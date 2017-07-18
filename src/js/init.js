@@ -1,6 +1,6 @@
 
 // Materialize jQuery
-(function() {
+(function($) {
 	$(document).ready(function(){
 		$('.dropdown-button').dropdown({
 			constrainWidth: false,
@@ -14,4 +14,4 @@
 		toc.pushpin({ top: toc.offset().top });
 		$('.scrollspy').scrollSpy();
 	});
-})();
+})(jQuery);

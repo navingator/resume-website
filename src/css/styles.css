@@ -37,7 +37,7 @@ nav .nav-background > .bg-image {
 	height: 64px;
 }
 
-nav li > a > .nav-icon {
+.side-nav li > a > .nav-icon {
   float: left;
   height: 48px;
   padding: 12px 0;
