@@ -3,6 +3,7 @@ a:hover {
   cursor: pointer;
 }
 
+/*** NAVBAR ***/
 nav {
   position: relative;
   z-index: 10;
@@ -55,30 +56,58 @@ nav .nav-background > .bg-image {
 	margin: 1rem 0;
 }
 
+/*** END NAVBAR ***/
+
+/*** Main Content ***/
+/** Cards **/
 .resume-item > .card > .card-image {
   flex: 0 0 180px;
   padding-left: 24px;
   margin: 24px 0;
 }
-.resume-item > .card > .resume-basic-info h4 {
+.resume-item > .card > h4 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.resume-item > .card > .resume-basic-info > .resume-date {
-  font-size: 0.8rem;
+.resume-item > .card .resume-position {
+  font-size: 1.2rem;
+}
+.resume-item > .card .resume-date {
   color: rgba(0, 0, 0, 0.6)
 }
-
-.resume-item > .card > .resume-basic-info > .resume-location {
-  font-size: 0.8rem;
+.resume-item > .card .resume-subsection-header {
   margin: 0.5rem 0;
 }
-
-.resume-item > .resume-main-content {
-  display: none;
+.resume-item > .card .resume-sub-position {
+  font-size: 1.1rem;
+}
+.resume-item > .card .resume-subsection-header .resume-date {
+  font-size: 0.8rem;
+}
+.resume-item > .card .resume-location {
+  font-size: 0.8rem;
 }
 
+.resume-item .card-content > .resume-main-content {
+  display: none;
+  margin: 1rem 0 0 0;
+}
+.card > .card-content > .resume-main-content > p {
+  margin: 0.5rem 0 0 0;
+  color: rgba(0, 0, 0, 0.8);
+}
 
+/* Card Expansion */
+
+.resume-item > .card {
+  cursor: pointer;
+  transition: height 0.25s cubic-bezier(0.4, 0.0, 0.2, 1); 
+}
+
+.card.active > .card-content > .resume-main-content {
+  display: block;
+}
+/** END MAIN CONTENT */
 
 /* Small */
  @media (max-width: 600px) {
