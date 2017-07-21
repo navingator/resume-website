@@ -19,7 +19,6 @@
 
 	function toggleActiveCard() {
 		const card = $(this);
-		const contentWrap = card.find('.card-content');
 		const content = card.find('.resume-main-content');
 		const prevCss = content.attr('style'); // cache style attribute to set later
 		const heights = []; // array that contains initial and final heights 
