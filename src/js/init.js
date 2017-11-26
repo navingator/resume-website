@@ -4,10 +4,11 @@
 	$(document).ready(function(){
 		$('.dropdown-button').dropdown({
 			constrainWidth: false,
-			hover: false,
+			hover: true,
 			belowOrigin: true,
 			alignment: 'right'
 		});
+
 		$('.button-collapse').sideNav();
 
 		const toc = $('.table-of-contents');
